@@ -6,7 +6,7 @@
 # General linux
 apt-get update
 apt-get upgrade -y
-apt-get install -y bzip2 gcc git htop wget screen nano
+apt-get install -y build-essential git htop wget screen nano
 apt-get upgrade -y bash
 apt-get clean
 
@@ -16,6 +16,9 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O \
 bash Miniconda.sh -b
 rm -rf Miniconda.sh
 export PATH="/root/miniconda3/bin:$PATH"
+cat >> ~/.profile << EOF
+export PATH="/root/miniconda3/bin:$PATH"
+EOF
 
 # Python libraries
 conda install -y jupyter
@@ -39,6 +42,10 @@ pip install cufflinks
 pip install tensorflow
 pip install keras
 pip install eikon
+
+# Copy files and create directories
+mkdir /root/notebook
+cd /root/notebook
 
 # Start Jypyter Lab
 jupyter lab &
