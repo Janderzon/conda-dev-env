@@ -42,10 +42,3 @@ pip install cufflinks
 pip install tensorflow
 pip install keras
 pip install eikon
-
-# Copy files and create directories
-mkdir /root/notebook
-cd /root/notebook
-
-# Start Jypyter Lab
-jupyter lab &
