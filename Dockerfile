@@ -1,7 +1,7 @@
 # Building a Docker Image with the latest Ubuntu Version 
 # and a basic Python install
 
-FROM ubuntu/latest
+FROM ubuntu:latest
 
 ADD install.sh .
 RUN chmod u+x install.sh
