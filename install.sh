@@ -13,7 +13,7 @@ apt-get clean
 # Miniconda
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O \
     Miniconda.sh
-bash Miniconda.sh -bash
+bash Miniconda.sh -b
 rm -rf Miniconda.sh
 export PATH="/root/miniconda3/bin:$PATH"
 
