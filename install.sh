@@ -18,5 +18,27 @@ rm -rf Miniconda.sh
 export PATH="/root/miniconda3/bin:$PATH"
 
 # Python libraries
+conda install -y jupyter
+conda install -y jupyterlab
+conda install -y numpy
+conda install -y pytables
 conda install -y pandas
-conda install -y ipython
+conda install -y scipy
+conda install -y matplotlib
+conda install -y seaborn
+conda install -y quandl
+conda install -y scikit-learn
+conda install -y openpyxl
+conda install -y xlrd xlwt
+conda install -y pyyaml
+
+pip install --upgrade pip
+pip install q
+pip install plotly
+pip install cufflinks
+pip install tensorflow
+pip install keras
+pip install eikon
+
+# Start Jypyter Lab
+jupyter lab &
