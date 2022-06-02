@@ -4,6 +4,7 @@
 FROM ubuntu:latest
 
 ADD install.sh .
+ADD jupyter_notebook_config.py /root/.jupyter
 RUN chmod u+x /install.sh
 RUN /install.sh
 ENV PATH /root/miniconda3/bin:$PATH
