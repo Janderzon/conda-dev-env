@@ -3,11 +3,10 @@
 
 FROM ubuntu:latest
 
-ADD install.sh .
-ADD jupyter_notebook_config.py /root/.jupyter
+ADD install.sh /
+ADD jupyter_notebook_config.py /root/.jupyter/
 RUN chmod u+x /install.sh
 RUN /install.sh
 ENV PATH /root/miniconda3/bin:$PATH
-WORKDIR /root/notebook
 
-CMD ["jupyter lab &"]
+CMD ["jupyter", "lab", "--app_dir=/var/ --preferred_dir /var/notebook/"]
