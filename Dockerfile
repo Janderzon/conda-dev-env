@@ -8,5 +8,6 @@ ADD jupyter_notebook_config.py /root/.jupyter/
 RUN chmod u+x /install.sh
 RUN /install.sh
 ENV PATH /root/miniconda3/bin:$PATH
+WORKDIR /var/notebook/
 
-CMD ["jupyter", "lab", "--app_dir=/var/ --preferred_dir /var/notebook/"]
+CMD ["jupyter", "lab"]
